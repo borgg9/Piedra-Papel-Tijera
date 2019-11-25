@@ -8,9 +8,6 @@ miFrame = Frame(raiz)
 
 miFrame.pack()
 
-
-
-
 # ------------------------MAQUINA----------------------------
 
 # moviemineto de la maquina
@@ -36,15 +33,6 @@ textoMaquina.grid(row=1, column=1)
 maquina = Entry(miFrame, textvariable = pantallaMaquina)
 maquina.grid(row=1, column=2, padx=10, pady=10, columnspan = 2)
 maquina.config(background='black', fg='#03f943', justify='center')
-                
-
-                                  
-
-
-
-
-                
-    
     
 # ------------------------JUGADOR----------------------------
 
@@ -64,10 +52,6 @@ def manoJugador(num):
     mostrarMarcador()     #cuando el jugador saca su mano, mostramos resultado
 
     numeroTirada()  #cuando el jugador saca su mano, se suma tirada           
-
-
-
-
     
 # texto jugador
 pantallaJugador = StringVar() #imprimir en la pantalla
@@ -87,10 +71,7 @@ botonPapel = Button(miFrame, text='Papel', width = 6, padx=2, pady=2, command=la
 botonPapel.grid(row=5, column=2)
 botonTijera = Button(miFrame, text='Tijera', width = 6, padx=2, pady=2, command=lambda:manoJugador('Tijera'))
 botonTijera.grid(row=5, column=3)
-
-
-                
-                
+             
 # ------------------------MARCADOR 1 ----------------------------
 
 marcador_maquina = 0
@@ -141,7 +122,6 @@ def mostrarMarcador():
         
     pantallaMarcador.set(mostrarResultados) 
     
-    
 # texto maquina
 pantallaMarcador = StringVar() #imprimir en la pantalla
 
@@ -152,8 +132,6 @@ pantallaMarcador = StringVar() #imprimir en la pantalla
 marcador = Entry(miFrame, width = 28,textvariable = pantallaMarcador)
 marcador.grid(row=2, column=1, padx=10, pady=0, columnspan = 3)
 marcador.config(background='black', fg='#03f943', justify='center')           
-
-
 
 # ------------------------numero de tiradas + puntuacion  ----------------------------
 
@@ -175,11 +153,5 @@ pantallaTiradas = StringVar() #imprimir en la pantalla
 marcadorTiradas = Entry(miFrame, width = 28, textvariable = pantallaTiradas)
 marcadorTiradas.grid(row=3, column=1, padx=10, pady=0, columnspan = 3)
 marcadorTiradas.config(background='black', fg='#03f943', justify='center') 
-
-
-
-
-
-
-           
+         
 raiz.mainloop()
